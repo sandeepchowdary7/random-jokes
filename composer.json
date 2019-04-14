@@ -1,0 +1,26 @@
+{
+    "name": "sandeepchowdary7/random-jokes",
+    "description": "Displays a random jokes",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sandeep",
+            "email": "sxk80270@ucmo.edu"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Sandeep\\RandomJoke\\" : "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Sandeep\\RandomJoke\\Tests\\" : "tests"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.5"
+    }
+}

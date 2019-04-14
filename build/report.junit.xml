@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="BeyondCode Test Suite" tests="2" assertions="2" errors="0" failures="0" skipped="0" time="0.002202">
+    <testsuite name="Sandeep\RandomJoke\Tests\JokeFactoryTest" file="/Users/konakanchi/Development/Packages/sandeep-testing-package/tests/JokeFactoryTest.php" tests="2" assertions="2" errors="0" failures="0" skipped="0" time="0.002202">
+      <testcase name="it_returns_random_joke" class="Sandeep\RandomJoke\Tests\JokeFactoryTest" classname="Sandeep.RandomJoke.Tests.JokeFactoryTest" file="/Users/konakanchi/Development/Packages/sandeep-testing-package/tests/JokeFactoryTest.php" line="11" assertions="1" time="0.002008"/>
+      <testcase name="it_returns_predefined_joke" class="Sandeep\RandomJoke\Tests\JokeFactoryTest" classname="Sandeep.RandomJoke.Tests.JokeFactoryTest" file="/Users/konakanchi/Development/Packages/sandeep-testing-package/tests/JokeFactoryTest.php" line="20" assertions="1" time="0.000194"/>
+    </testsuite>
+  </testsuite>
+</testsuites>
