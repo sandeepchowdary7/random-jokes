@@ -3,14 +3,11 @@
 namespace Tests;
 
 use GuzzleHttp\Client;
-use PHPUnit\Framework\TestCase;
-use Sandeep\RandomJoke\JokeFactory;
-use GuzzleHttp\Handler\MockHandler;
 use GuzzleHttp\HandlerStack;
 use GuzzleHttp\Psr7\Response;
-use GuzzleHttp\Psr7\Request;
-use GuzzleHttp\Exception\RequestException;
-
+use PHPUnit\Framework\TestCase;
+use GuzzleHttp\Handler\MockHandler;
+use Sandeep\RandomJoke\JokeFactory;
 
 class JokeFactoryTest extends TestCase
 {

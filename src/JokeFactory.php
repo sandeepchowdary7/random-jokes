@@ -12,7 +12,6 @@ class JokeFactory
     public function __construct(Client $client = null)
     {
         $this->client = $client ?: new Client();
-       
     }
 
     public function getRandomJoke()
