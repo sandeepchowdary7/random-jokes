@@ -10,7 +10,7 @@ class JokeFactoryTest extends TestCase
     /** @test */
     public function it_returns_random_joke()
     {
-        $jokes = new JokeFactory([ 'a sample joke.' ]);
+        $jokes = new JokeFactory(['a sample joke.']);
         $joke = $jokes->getRandomJoke();
 
         $this->assertSame('a sample joke.', $joke);
@@ -22,7 +22,7 @@ class JokeFactoryTest extends TestCase
         $chuckNorrisJokes = [
             'Chuck Norris sheds his skin twice a year.',
             'Chuck Norris does not teabag the ladies. He potato-sacks them.',
-            'What was going through the minds of all of "Chuck Norris/" victims before they died? His shoe.'
+            'What was going through the minds of all of "Chuck Norris/" victims before they died? His shoe.',
         ];
 
         $jokes = new JokeFactory();
