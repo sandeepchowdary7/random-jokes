@@ -1,33 +1,30 @@
 <?php
 
-namespace Sandeep\RandomJoke\Tests;
+namespace Tests;
 
+use GuzzleHttp\Client;
 use PHPUnit\Framework\TestCase;
 use Sandeep\RandomJoke\JokeFactory;
+use GuzzleHttp\Handler\MockHandler;
+use GuzzleHttp\HandlerStack;
+use GuzzleHttp\Psr7\Response;
+use GuzzleHttp\Psr7\Request;
+use GuzzleHttp\Exception\RequestException;
+
 
 class JokeFactoryTest extends TestCase
 {
     /** @test */
-    public function it_returns_random_joke()
+    public function it_returns_a_random_joke()
     {
-        $jokes = new JokeFactory(['a sample joke.']);
+        $mock = new MockHandler([
+            new Response(200, [], '{ "type": "success", "value": { "id": 441, "joke": "Chuck Norris did not &quot;lose&quot; his virginity, he stalked it and then destroyed it with extreme prejudice.", "categories": [] } }'),
+        ]);
+        $handler = HandlerStack::create($mock);
+        $client = new Client(['handler' => $handler]);
+        $jokes = new JokeFactory($client);
         $joke = $jokes->getRandomJoke();
 
-        $this->assertSame('a sample joke.', $joke);
-    }
-
-    /** @test */
-    public function it_returns_predefined_joke()
-    {
-        $chuckNorrisJokes = [
-            'Chuck Norris sheds his skin twice a year.',
-            'Chuck Norris does not teabag the ladies. He potato-sacks them.',
-            'What was going through the minds of all of "Chuck Norris/" victims before they died? His shoe.',
-        ];
-
-        $jokes = new JokeFactory();
-        $joke = $jokes->getRandomJoke();
-
-        $this->assertContains($joke, $chuckNorrisJokes);
+        $this->assertSame('Chuck Norris did not &quot;lose&quot; his virginity, he stalked it and then destroyed it with extreme prejudice.', $joke);
     }
 }

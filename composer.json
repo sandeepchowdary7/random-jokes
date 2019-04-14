@@ -9,7 +9,9 @@
             "email": "sxk80270@ucmo.edu"
         }
     ],
-    "require": {},
+    "require": {
+        "guzzlehttp/guzzle": "~6.0"
+    },
     "autoload": {
         "psr-4": {
             "Sandeep\\RandomJoke\\" : "src"
