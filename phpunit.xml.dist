@@ -10,8 +10,8 @@
          processIsolation="false"
          stopOnFailure="false">
     <testsuites>
-        <testsuite name="BeyondCode Test Suite">
-            <directory>tests</directory>
+        <testsuite name="Random Joke Test Suite">
+            <directory>randomJoke/tests</directory>
         </testsuite>
     </testsuites>
     <filter>

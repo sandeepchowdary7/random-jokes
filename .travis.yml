@@ -15,4 +15,5 @@ before_script:
   - travis_retry composer update ${COMPOSER_FLAGS}
 
 script:
-  - ./vendor/bin/phpunit
+  - randomJoke/tests
+  - randomJoke/tests --coverage-clover=coverage.xml
